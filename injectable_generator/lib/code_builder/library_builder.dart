@@ -75,6 +75,7 @@ mixin SharedGeneratorCode {
     getAsyncReferName ??= asExtension ? 'getAsync' : 'gh.getAsync';
     getReferName ??= 'gh';
     final isAsync = dependencies.isAsyncOrHasAsyncDependency(iDep);
+    print('_buildParamAssignment: ${iDep.toString()} isAsync!!!!!!!!: $isAsync');
     final expression = refer(isAsync ? getAsyncReferName : getReferName).call(
       [],
       {
